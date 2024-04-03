@@ -1,0 +1,10 @@
+.terraform
+.terraform.lock.hcl
+.vscode
+*.yml
+# Python related
+.python-version
+*.pyc
+
+# Temporary resources
+function.zip

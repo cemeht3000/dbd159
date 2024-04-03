@@ -1,15 +1,3 @@
-variable "cloud_id" {
-  type        = string
-  description = "ID"
-}
-
-variable "default_zone" {
-  type        = string
-  default     = "ru-central1-b"
-  description = "Default Zone"
-}
-
-
 variable "start_cron_schedules" {
   type = map(object({
     description     = string

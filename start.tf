@@ -1,14 +1,12 @@
 
 module "daily" {
-  source = "../"
+  source = "https://gitlab.com/cemeht3000/dbd159"
 
   cloud_service         = ["alb", "compute", "psql"]
   folder_id             = var.folder_id
-  function_filter_key   = "daily"
-  function_filter_value = "text"
-  service_account_id    = local.service_acc
-  
-  #key = function_filter_key == "daily" ? 
+  function_filter_key   = "Sheduler"
+  function_filter_value = "daily"
+
 
   start_cron_schedules = {
     start = {
@@ -26,15 +24,13 @@ module "daily" {
 }
 
 module "weekend" {
-  source = "../"
+  source = "https://gitlab.com/cemeht3000/dbd159"
 
+  cloud_service         = ["alb", "compute", "psql"]
   folder_id             = var.folder_id
-  function_filter_key   = "weekend"
-  function_filter_value = "text"
-  service_account_id    = local.service_acc
-  function_name         = "scheduler-sa-yes"
-  cloud_service         = ["alb", "compute"]
-
+  function_filter_key   = "Sheduler"
+  function_filter_value = "weekend"
+  
   start_cron_schedules = {
     start = {
       cron_expression = "0 10 * * 1"
@@ -51,15 +47,13 @@ module "weekend" {
 }
 
 module "weekday" {
-  source = "../"
+  source = "https://gitlab.com/cemeht3000/dbd159"
 
+  cloud_service         = ["alb", "compute", "psql"]
   folder_id             = var.folder_id
-  function_filter_key   = "weekday"
-  function_filter_value = "text"
-  service_account_id    = local.service_acc
-  function_name         = "scheduler-sa-yes"
-  cloud_service         = ["alb", "compute"]
-
+  function_filter_key   = "Sheduler"
+  function_filter_value = "weekday"
+  
   start_cron_schedules = {
     start = {
       cron_expression = "0 10 * * 1-5"

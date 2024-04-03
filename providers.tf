@@ -1,5 +1,4 @@
 provider "yandex" {
-  cloud_id  = var.cloud_id
-  folder_id = var.folder_id
-  zone      = var.default_zone
+  cloud_id  = "b1gppjlveq90bedh0bp4"
+  folder_id = "b1gtv3r4aq9sunq9f3qq"
 }

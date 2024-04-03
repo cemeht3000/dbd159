@@ -1,6 +1,6 @@
 
 module "daily" {
-  source = "git::https://gitlab.com/cemeht3000/dbd159.git"
+  source = "https://gitlab.com/cemeht3000/dbd159.git"
 
   cloud_service         = ["alb", "compute", "psql"]
   folder_id             = var.folder_id
@@ -22,7 +22,8 @@ module "daily" {
     }
   }
 }
-/*
+
+ /*
 module "weekend" {
   source = "git::https://gitlab.com/cemeht3000/dbd159.git"
 
@@ -68,3 +69,4 @@ module "weekday" {
     }
   }
 }
+*/

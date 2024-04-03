@@ -1,6 +1,6 @@
 
 module "daily" {
-  source = "https://gitlab.com/cemeht3000/dbd159/-/tree/main?ref_type=heads"
+  source = "https://gitlab.com/cemeht3000/dbd159/"
 
   cloud_service         = ["alb", "compute", "psql"]
   folder_id             = var.folder_id
